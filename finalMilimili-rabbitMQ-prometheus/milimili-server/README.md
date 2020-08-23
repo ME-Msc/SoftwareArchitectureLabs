@@ -1,0 +1,6 @@
+- mvn compile jib:dockerBuild
+- docker images
+- docker run -d --name milimili-0.5-1 --cpus=0.5 -p 8083:8082 --mount type=bind,source=//c/Users/15436/Desktop/Milimili/data,target=/nfs milimili-server
+- docker run -d --name milimili-0.5-2 --cpus=0.5 -p 8084:8082 --mount type=bind,source=//c/Users/15436/Desktop/Milimili/data,target=/nfs milimili-server
+- docker run -d --name milimili-0.5-3 --cpus=0.5 -p 8085:8082 --mount type=bind,source=//c/Users/15436/Desktop/Milimili/data,target=/nfs milimili-server
+- docker run -d --name milimili-0.5-4 --cpus=0.5 -p 8086:8082 --mount type=bind,source=//c/Users/15436/Desktop/Milimili/data,target=/nfs milimili-server

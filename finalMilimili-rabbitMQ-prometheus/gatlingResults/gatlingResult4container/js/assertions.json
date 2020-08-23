@@ -1,0 +1,10 @@
+{
+  "simulation": "milimili.GatlingMilimili",
+  "simulationId": "gatlingmilimili",
+  "start": 1594194153229,
+  "description": "",
+  "scenarios": ["Testing Milimili GetFiles Request"],
+  "assertions": [
+
+  ]
+}

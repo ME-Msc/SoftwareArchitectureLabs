@@ -1,0 +1,40 @@
+#global:
+#  resolve_timeout: 5m
+
+#route:
+#  group_by: ['alertname']
+#  group_wait: 10s
+#  group_interval: 10s
+#  repeat_interval: 1h
+#  receiver: 'web.hook'
+#receivers:
+#- name: 'web.hook'
+#  webhook_configs:
+#  - url: 'http://127.0.0.1:5001/'
+#inhibit_rules:
+#  - source_match:
+#      severity: 'critical'
+#    target_match:
+#      severity: 'warning'
+#    equal: ['alertname', 'dev', 'instance']
+global:
+  resolve_timeout: 5m #处理超时时间，默认为5min
+  smtp_smarthost: 'smtp.qq.com:465' # 邮箱smtp服务器代理
+  smtp_from: '1543669883@qq.com' # 发送邮箱名称
+  smtp_auth_username: '1543669883@qq.com' # 邮箱名称
+  smtp_auth_password: 'fpqxupjognfrjgeg' # 邮箱密码或授权码
+  smtp_require_tls: false
+templates:
+  - 'E:\Apps\alertmanager\template\*.tmpl'
+route:
+  group_by: ['alertname', 'cluster', 'service']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 10m
+  receiver: default-receiver
+receivers:
+- name: 'default-receiver'
+  email_configs:
+  - to: 'msc18652052132@163.com'
+    html: ‘{{ template "alert.html" . }}‘
+    headers: { Subject: "[WARN] prometheus 监控报警邮件邮件告警" }

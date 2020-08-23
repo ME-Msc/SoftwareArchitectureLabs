@@ -1,0 +1,12 @@
+groups:
+- name: cpu_rules
+  rules:
+  - alert: cpu_usage_warning
+    expr: system_cpu_usage > 0.8
+    for: 5s
+    labels:
+      user: prometheus
+      severity: warning
+    annotations:
+      description: "服务器: CPU使用超过80%！(当前值: {{ $value }}%)"
+      summary: "机器 {{ $labels.instance }} CPU使用超过80% "
