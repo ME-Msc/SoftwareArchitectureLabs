@@ -1,0 +1,10 @@
+{
+  "simulation": "nature.GatlingNature",
+  "simulationId": "gatlingnature",
+  "start": 1587296749580,
+  "description": "",
+  "scenarios": ["Testing Nature Caculating"],
+  "assertions": [
+
+  ]
+}

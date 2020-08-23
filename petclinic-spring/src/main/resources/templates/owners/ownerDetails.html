@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
+
+<body>
+
+
+  <h2>Student Information</h2>
+
+
+  <table class="table table-striped" th:object="${owner}">
+    <tr>
+      <th>Name</th>
+      <td><b th:text="*{firstName + ' ' + lastName}"></b></td>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <td th:text="*{gender}" />
+      </td>
+    </tr>
+    <tr>
+      <th>Birth Date</th>
+      <td th:text="*{birthDate}" />
+      </td>
+    </tr>
+    <tr>
+      <th>Address</th>
+      <td th:text="*{address}" />
+      </td>
+    </tr>
+    <tr>
+      <th>Department</th>
+      <td th:text="*{Department}" />
+      </td>
+    </tr>
+    <tr>
+      <th>Number</th>
+      <td th:text="*{number}" />
+      </td>
+    </tr>
+  </table>
+
+  <a th:href="@{{id}/edit(id=${owner.id})}" class="btn btn-default">Edit Student</a>
+  <a th:href="@{{id}/delete(id=${owner.id})}" class="btn btn-default">Delete Student</a>
+
+  </body>
+
+</html>

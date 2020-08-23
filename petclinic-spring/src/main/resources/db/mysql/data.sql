@@ -1,0 +1,10 @@
+INSERT INTO owners VALUES (1, 'George', 'Franklin', 'male', '2000-01-01', '110 W. Liberty St.', 'CS', '171860661');
+INSERT INTO owners VALUES (2, 'Betty', 'Davis', 'female', '2000-02-01', '638 Cardinal Ave.', 'CS', '171860662');
+INSERT INTO owners VALUES (3, 'Eduardo', 'Rodriquez', 'male', '2000-03-01', '2693 Commerce St.', 'CS', '171860663');
+INSERT INTO owners VALUES (4, 'Harold', 'Davis', 'male', '2000-04-01', '563 Friendly St.', 'CS', '171860664');
+INSERT INTO owners VALUES (5, 'Peter', 'McTavish', 'male', '2000-05-01', '2387 S. Fair Way', 'CS', '171860665');
+INSERT INTO owners VALUES (6, 'Jean', 'Coleman', 'female', '2000-06-01', '105 N. Lake St.', 'IM', '171860666');
+INSERT INTO owners VALUES (7, 'Jeff', 'Black', 'male', '2000-07-01', '1450 Oak Blvd.', 'IM', '171860667');
+INSERT INTO owners VALUES (8, 'Maria', 'Escobito', 'female', '2000-08-01', '345 Maple St.', 'IM', '171860668');
+INSERT INTO owners VALUES (9, 'David', 'Schroeder', 'male', '2000-09-01', '2749 Blackhawk Trail', 'IM', '171860669');
+INSERT INTO owners VALUES (10, 'Carlos', 'Estaban', 'male', '2000-10-01', '2335 Independence La.', 'IM', '171860670');
